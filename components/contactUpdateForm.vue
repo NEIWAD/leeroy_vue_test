@@ -1,5 +1,5 @@
 <template>
-  <v-form v-model="valid">
+  <v-form v-model="valid" class="text-right">
     <v-text-field v-model="firstname" :rules="firstnameRules"></v-text-field>
     <v-text-field v-model="lastname" :rules="lastnameRules"></v-text-field>
     <v-text-field v-model="email" :rules="emailRules"></v-text-field>

@@ -4,34 +4,28 @@
       <v-row>
         <v-col class="d-flex align-center justify-space-between">
           <div class="d-flex align-center">
-            <v-btn to="/" icon class="mr-4">
-              <v-icon>
-                mdi-arrow-left
-              </v-icon>
-            </v-btn>
+            <v-slide-x-transition appear>
+              <v-btn to="/" icon class="mr-4">
+                <v-icon>
+                  mdi-arrow-left
+                </v-icon>
+              </v-btn>
+            </v-slide-x-transition>
             <h1>{{ contact.firstname }} {{ contact.lastname }}</h1>
           </div>
           <div class="d-flex align-center">
-            <v-btn
-              v-if="!edit"
-              icon
-              color="orange lighten-2"
-              @click="edit = true"
-            >
-              <v-icon>
-                mdi-pencil
-              </v-icon>
-            </v-btn>
-            <v-btn
-              v-if="edit"
-              icon
-              color="red lighten-2"
-              @click="deleteContact"
-            >
-              <v-icon>
-                mdi-delete
-              </v-icon>
-            </v-btn>
+            <v-slide-y-transition appear>
+              <v-btn
+                v-if="!edit"
+                icon
+                color="orange lighten-2"
+                @click="edit = true"
+              >
+                <v-icon>
+                  mdi-pencil
+                </v-icon>
+              </v-btn>
+            </v-slide-y-transition>
           </div>
         </v-col>
       </v-row>
